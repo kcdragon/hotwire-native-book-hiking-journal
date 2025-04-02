@@ -4,3 +4,4 @@ rails/config/credentials/development.yml.enc
 
 # Android credentials
 android/app/google-services.json
+.DS_Store
