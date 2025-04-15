@@ -40,7 +40,7 @@
   <div>
     <%= form.label :image, class: "form-label" %>
 
-    <% if hike.image.attached? %>
+    <% if hike.image.attached? && hike.image.persisted? %>
       <%= image_tag hike.image, class: "img-thumbnail" %>
       <%= form.hidden_field :image, value: hike.image.signed_id %>
     <% end %>
