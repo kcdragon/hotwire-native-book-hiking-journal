@@ -31,12 +31,12 @@ class MainActivity : HotwireActivity() {
         }
         showTab(tabs.first())
 
-        Hotwire.loadPathConfiguration(
-            context = this,
-            location = PathConfiguration.Location(
-                remoteFileUrl = "$baseURL/configurations/android_v1.json"
-            )
-        )
+//        Hotwire.loadPathConfiguration(
+//            context = this,
+//            location = PathConfiguration.Location(
+//                remoteFileUrl = "$baseURL/configurations/android_v1.json"
+//            )
+//        )
     }
 
     override fun navigatorConfigurations() = tabs.map { tab ->
