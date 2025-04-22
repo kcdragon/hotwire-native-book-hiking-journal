@@ -66,6 +66,9 @@
   </div>
 
   <div class="d-grid d-sm-flex justify-content-sm-end mt-4">
-    <%= form.submit "Save", class: "btn btn-primary" %>
+    <%= form.submit "Save", class: "btn btn-primary", data: {
+      controller: "bridge--button",
+      bridge_title: "Save",
+    } %>
   </div>
 <% end %>

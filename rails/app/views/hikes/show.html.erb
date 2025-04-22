@@ -23,7 +23,11 @@
       <% end %>
 
       <% if user_signed_in? && @hike.user == current_user %>
-        <%= link_to edit_hike_path(@hike), class: "btn btn-outline-primary" do %>
+        <%= link_to edit_hike_path(@hike), class: "btn btn-outline-primary", data: {
+          controller: "bridge--button",
+          bridge_title: "Edit",
+          bridge_image_name: "pencil",
+        } do %>
           <i class="bi bi-pencil"></i>
           Edit
         <% end %>

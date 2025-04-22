@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Hotwire.loadPathConfiguration(from: [
             .server(baseUrl.appending(path: "configurations/ios_v1.json"))
         ])
+        Hotwire.registerBridgeComponents([
+            ButtonComponent.self
+        ])
         return true
     }
 }
