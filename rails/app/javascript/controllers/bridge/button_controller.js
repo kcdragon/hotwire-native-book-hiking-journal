@@ -7,8 +7,9 @@ export default class extends BridgeComponent {
     super.connect();
 
     const title = this.bridgeElement.bridgeAttribute("title");
-    const imageName = this.bridgeElement.bridgeAttribute("image-name");
-    this.send("connect", {title, imageName}, () => {
+    const imageName = this.bridgeElement.bridgeAttribute("ios-image-name");
+    const iconName = this.bridgeElement.bridgeAttribute("android-icon-name");
+    this.send("connect", {title, imageName, iconName}, () => {
       this.bridgeElement.click();
     });
   }
