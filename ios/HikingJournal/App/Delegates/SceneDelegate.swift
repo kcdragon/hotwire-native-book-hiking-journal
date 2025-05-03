@@ -8,7 +8,11 @@
 import HotwireNative
 import UIKit
 
+#if DEBUG
 let baseUrl = URL(string: "http://localhost:3000")!
+#else
+let baseUrl = URL(string: "http://192.168.86.195:3000")!
+#endif
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate { 
     var window: UIWindow?
