@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :hikes, only: :index, controller: :user_hikes
   end
 
+  resources :notification_tokens, only: :create
+
   resources :configurations, only: [] do
     get :ios_v1, on: :collection
     get :android_v1, on: :collection

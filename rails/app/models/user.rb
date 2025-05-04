@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :hikes
   has_many :hike_likes
   has_many :liked_hikes, through: :hike_likes, source: :hike
+  has_many :notification_tokens
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true

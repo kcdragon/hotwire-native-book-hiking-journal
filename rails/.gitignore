@@ -23,3 +23,5 @@
 
 # Ignore key for decrypting credentials.
 /config/master.key
+
+/config/credentials/development.key

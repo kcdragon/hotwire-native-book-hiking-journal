@@ -18,12 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private let tabBarController = TabBarController()
+    private lazy var notificationRouter = NotificationRouter(
+        router: tabBarController
+    )
     
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
+        UNUserNotificationCenter.current().delegate = notificationRouter
         window?.rootViewController = tabBarController
     }
 }

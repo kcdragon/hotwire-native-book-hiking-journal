@@ -72,6 +72,9 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    apnotic (1.7.2)
+      connection_pool (~> 2)
+      net-http2 (>= 0.18.3, < 2)
     ast (2.4.3)
     base64 (0.2.0)
     bcrypt (3.1.20)
@@ -93,6 +96,7 @@ GEM
     ffi (1.17.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    http-2 (1.1.1)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     image_processing (1.13.0)
@@ -127,6 +131,8 @@ GEM
     mini_portile2 (2.8.8)
     minitest (5.25.1)
     msgpack (1.7.3)
+    net-http2 (0.19.0)
+      http-2 (>= 1.0)
     net-imap (0.5.0)
       date
       net-protocol
@@ -140,6 +146,8 @@ GEM
     nokogiri (1.16.7)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    noticed (2.6.1)
+      rails (>= 6.1.0)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
@@ -252,12 +260,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  apnotic (~> 1.7)
   bcrypt (~> 3.1.7)
   bootsnap
   debug
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  noticed (~> 2.6)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.0)

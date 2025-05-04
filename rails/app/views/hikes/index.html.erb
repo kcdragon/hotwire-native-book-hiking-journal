@@ -1,5 +1,9 @@
 <%= render "shared/header", title: "Hikes" %>
 
+<% if user_signed_in? %>
+  <meta data-controller="bridge--notification-token" />
+<% end %>
+
 <% if @hikes.any? %>
   <div class="container list-group list-group-flush px-0">
     <%= render @hikes %>

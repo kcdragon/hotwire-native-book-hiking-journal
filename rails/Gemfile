@@ -21,3 +21,6 @@ group :development do
   gem "web-console"
   gem "rubocop"
 end
+
+gem "noticed", "~> 2.6"
+gem "apnotic", "~> 1.7"

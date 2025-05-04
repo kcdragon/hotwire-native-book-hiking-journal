@@ -39,3 +39,13 @@ extension TabBarController: NavigatorDelegate {
         }
     }
 }
+
+extension TabBarController: Router {
+    func route(_ url: URL) {
+        navigators[selectedIndex].route(url)
+    }
+    
+    func route(_ proposal: VisitProposal) {
+        navigators[selectedIndex].route(proposal)
+    }
+}
